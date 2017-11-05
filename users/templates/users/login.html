@@ -1,0 +1,21 @@
+{% extends 'learning_logs/base.html'%}
+
+{% block title %}登录{% endblock title %}
+    {% block extracss %}{% endblock %}
+
+{% block content %}
+<div style="text-align:center">
+    <h3><span>登录</span></h3>
+    {% if form.errors %}
+        <p>咋治滴！错啦！重新输入！</p>
+    {% endif %}
+        <form action="{% url 'users:login' %}" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button name="submit">登录</button>
+            <input type="hidden" name="next" value="{% url 'learning_logs:index' %}" />
+        </form>
+</div>
+{% endblock content %}
+
+

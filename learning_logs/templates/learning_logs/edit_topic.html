@@ -1,0 +1,12 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block title %}修改主题{% endblock title %}
+
+{% block content %}
+    <p>修改主题：</p>
+    <form action="{% url 'learning_logs:edit_topic' topic.id %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}    {# 用{{ form.as_p }}as_p是一种修饰符，让表单整洁的显示 #}
+      <button name="submit">保存修改</button>
+    </form>
+{% endblock content %}

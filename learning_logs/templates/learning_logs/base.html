@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Author" content="LiGuanNan">
+    <meta name="Keywords" content="李冠男,学习笔记">
+    <meta name="Description" content="这里是李冠男的学习笔记，不久的将来希望也能成为更多人记录学习笔记的地方。">
+    <title>{% block title %}此处标题{% endblock title %} - 李冠男的个人学习笔记</title>
+    <link href="/static/css/main.css" rel="stylesheet" type="text/css">
+    {% block extracss %}{% endblock %}
+</head>
+<body>
+<!--全局导航条-->
+<div id="globllink">
+    <ul>
+      <li><a href="{% url 'learning_logs:index' %}">首页</a></li>
+      <li><a href="{% url 'learning_logs:topics' %}">主题</a></li>
+    </ul>
+    <div id="globllink2">
+        <ul>
+          {% if user.is_authenticated %}
+              <li>你好，{{ user.username }} <a href="{% url 'users:logout' %}">注销</a></li>
+          {% else %}
+              <li><a href="{% url 'users:login' %}">登录</a></li>
+              <li><a href="{% url 'users:register' %}">注册</a></li>
+          {% endif %}
+        </ul>
+    </div>
+</div>
+<!--整体外层容器-->
+<div id="container">
+    <!--中间内容栏-->
+    <div>{% block content %}{% endblock content %}</div>
+</div>
+
+<!--footer-->
+<div id="footer">
+    &copy LiGuannan 个人学习笔记
+</div>
+</body>
+</html>

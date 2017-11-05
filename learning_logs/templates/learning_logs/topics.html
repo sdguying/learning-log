@@ -1,0 +1,21 @@
+{% extends "learning_logs/base.html" %}
+
+{% block title %}主题列表{% endblock title %}
+{% block extracss %}<link href="/static/css/topics.css" rel="stylesheet" type="text/css">{% endblock extracss %}
+{% block content %}
+<div id="topics">
+    <div>
+        <h3><span>主题列表</span></h3>
+        <ul>
+          {% for topic in topics %}
+              <li><a href="{% url 'learning_logs:edit_topic' topic.id %}">修改</a> |
+                  <a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>
+              </li>
+          {% empty %}
+            <li>没有更多的主题了</li>
+          {% endfor %}
+        </ul>
+    </div>
+    <h2><span><a href="{% url 'learning_logs:new_topic' %}">添加主题</a></span></h2>
+</div>
+{% endblock content %}

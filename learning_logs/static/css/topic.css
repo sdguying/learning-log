@@ -1,0 +1,76 @@
+#topic{
+    margin:0px;
+    padding:0px;
+}
+#topic div{
+    margin:0px;
+    padding:0px;
+    list-style-type: none;
+}
+#topic div h5{
+    margin:3px 0px 3px 15px;
+    padding:3px 0px 3px 15px;
+    font-size:20px;
+    color:#003366;
+    border-left: double;
+    border-bottom: 1px dotted;
+    border-bottom-left-radius: 15px;
+}
+#topic div h5 span{
+    float: right;
+    margin:-10px 0px;
+    padding:10px;
+    color:#f5dd5d;
+    background:#bbccdd;
+    border-radius:10px 0px 10px 0px;
+    font-size:14px;
+}
+#topic div h5 span a{
+    text-decoration: none;
+    color: #003366;
+}
+#topic div h5 span a:hover{
+    color: #a41515;
+}
+
+#topic ul{
+    margin:30px;
+    padding:0px;
+    list-style-type: none;
+}
+#topic ul li{
+    margin:10px 0px 15px 0px;
+    padding:0px;
+    border: 2px #E5E5E5 solid;
+    border-radius:10px 0px 10px 0px;
+}
+#topic ul li h1{
+    margin:0px;
+    padding:10px;
+    font-size:15px;
+    background:#E5E5E5;
+    border-radius:10px 0px 10px 0px;
+}
+#topic ul li p{
+    margin:15px;
+    padding:0px;
+    font-style: normal;
+    font-size:15px;
+    color:#444444;
+    line-height: 30px;
+}
+#topic ul li h1 span{
+    margin:0px;
+    padding:0px;
+    float:right;
+}
+#topic ul li h1 span a{
+    margin:0px;
+    padding:0px;
+    text-decoration:none;
+    font-size:14px;
+    color: #003366;
+}
+#topic ul li h1 span a:hover {
+    color: #a41515;
+}

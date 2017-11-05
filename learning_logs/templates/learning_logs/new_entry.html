@@ -1,0 +1,12 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block title %}添加新条目{% endblock title %}
+
+{% block content %}
+    <p>在<a href="{% url 'learning_logs:topic' topic.id %}">{{ topic }}</a>中添加新的条目：</p>
+    <form action="{% url 'learning_logs:new_entry' topic.id %}" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button name="submit">提交</button>
+    </form>
+{% endblock content %}
